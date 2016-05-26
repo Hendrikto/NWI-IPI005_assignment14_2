@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="assignment14_2.FXMLDocumentController">
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment14_2.FXMLDocumentController">
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
@@ -49,15 +49,12 @@
                   </TextField>
                </children>
             </GridPane>
-            <HBox spacing="5.0">
+            <Group>
                <children>
+                  <Button contentDisplay="TOP" defaultButton="true" layoutX="53.0" mnemonicParsing="false" text="Start" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <Button mnemonicParsing="false" text="Stop" />
-                  <Button contentDisplay="TOP" defaultButton="true" mnemonicParsing="false" text="Start" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </HBox>
+            </Group>
          </children>
       </VBox>
    </children>
