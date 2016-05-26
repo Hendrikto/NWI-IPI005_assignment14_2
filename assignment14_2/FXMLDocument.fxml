@@ -57,7 +57,7 @@
             <Group>
                <children>
                   <Button contentDisplay="TOP" defaultButton="true" layoutX="53.0" mnemonicParsing="false" onAction="#handleStartButton" text="Start" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button mnemonicParsing="false" onAction="#handleStopButton" text="Stop" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#handleStopButton" text="Stop" />
                </children>
             </Group>
          </children>
