@@ -1,0 +1,18 @@
+package assignment14_2;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+
+/**
+ *
+ * @author Hendrik Werner // s4549775
+ */
+public class FXMLDocumentController implements Initializable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
+
+}
