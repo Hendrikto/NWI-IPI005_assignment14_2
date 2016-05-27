@@ -28,14 +28,14 @@ public class Ackermann {
     }
 
     /**
-     * @return the m
+     * @return the m property
      */
     public IntegerProperty mProperty() {
         return m;
     }
 
     /**
-     * @return the n
+     * @return the n property
      */
     public IntegerProperty nProperty() {
         return n;
