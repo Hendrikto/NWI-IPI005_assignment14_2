@@ -12,10 +12,13 @@ import javafx.stage.Stage;
  */
 public class Assignment14_2 extends Application {
 
+    private FXMLDocumentController controller;
+
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(getClass().getResource("FXMLDocument.fxml").openStream());
+        controller = loader.getController();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
