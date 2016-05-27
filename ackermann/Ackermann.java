@@ -2,6 +2,7 @@ package ackermann;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.concurrent.Task;
 
 /**
  *
@@ -11,20 +12,23 @@ public class Ackermann {
 
     private final IntegerProperty m;
     private final IntegerProperty n;
-    private boolean stop;
+    private Task<Integer> task;
 
     public Ackermann() {
         this.m = new SimpleIntegerProperty();
         this.n = new SimpleIntegerProperty();
-        stop = false;
     }
 
     public void startCalculation() {
-        calculate(m.get(), n.get());
+        if (task != null) {
+            task.cancel();
+        }
+        task = new AckermannWorker(m.get(), n.get());
+        new Thread(task).start();
     }
 
     public void stopCalculation() {
-        stop = false;
+        task.cancel();
     }
 
     /**
@@ -39,19 +43,6 @@ public class Ackermann {
      */
     public IntegerProperty nProperty() {
         return n;
-    }
-
-    private int calculate(int m, int n) {
-        if (stop) {
-            return 0;
-        }
-        if (m == 0) {
-            return n + 1;
-        }
-        if (n == 0) {
-            return calculate(m - 1, 1);
-        }
-        return calculate(m - 1, calculate(m, n - 1));
     }
 
 }
