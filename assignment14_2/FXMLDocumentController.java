@@ -37,7 +37,7 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     private void handleStartButton(ActionEvent e) {
-        System.out.println("start");
+        generator.startCalculation();
     }
 
     /**
@@ -45,7 +45,7 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     private void handleStopButton(ActionEvent e) {
-        System.out.println("stop");
+        generator.stopCalculation();
     }
 
 }
