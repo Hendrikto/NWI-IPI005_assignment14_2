@@ -1,5 +1,6 @@
 package assignment14_2;
 
+import ackermann.Ackermann;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -14,13 +15,15 @@ import javafx.scene.text.Text;
  */
 public class FXMLDocumentController implements Initializable {
 
+    private Ackermann generator;
+
     @FXML protected TextField inputN;
     @FXML protected TextField inputM;
     @FXML protected Text resultText;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        generator = new Ackermann();
     }
 
     /**
