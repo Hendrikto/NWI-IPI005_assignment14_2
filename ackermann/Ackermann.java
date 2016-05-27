@@ -11,18 +11,20 @@ public class Ackermann {
 
     private final IntegerProperty m;
     private final IntegerProperty n;
+    private boolean stop;
 
     public Ackermann() {
         this.m = new SimpleIntegerProperty();
         this.n = new SimpleIntegerProperty();
+        stop = false;
     }
 
     public void startCalculation() {
-        // TODO
+        calculate(m.get(), n.get());
     }
 
     public void stopCalculation() {
-        // TODO
+        stop = false;
     }
 
     /**
@@ -40,6 +42,9 @@ public class Ackermann {
     }
 
     private int calculate(int m, int n) {
+        if (stop) {
+            return 0;
+        }
         if (m == 0) {
             return n + 1;
         }
