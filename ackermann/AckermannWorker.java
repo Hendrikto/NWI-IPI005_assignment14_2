@@ -23,6 +23,9 @@ public class AckermannWorker extends Task<Integer> {
     }
 
     private int calculate(int m, int n) {
+        if (isCancelled()) {
+            return 0;
+        }
         if (m == 0) {
             return n + 1;
         }
