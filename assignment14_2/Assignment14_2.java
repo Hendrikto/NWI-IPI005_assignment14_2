@@ -19,8 +19,7 @@ public class Assignment14_2 extends Application {
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(getClass().getResource("FXMLDocument.fxml").openStream());
         controller = loader.getController();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
