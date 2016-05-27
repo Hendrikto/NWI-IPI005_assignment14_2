@@ -14,9 +14,9 @@ import javafx.scene.text.Text;
  */
 public class FXMLDocumentController implements Initializable {
 
-    @FXML private TextField inputN;
-    @FXML private TextField inputM;
-    @FXML private Text resultText;
+    @FXML protected TextField inputN;
+    @FXML protected TextField inputM;
+    @FXML protected Text resultText;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
