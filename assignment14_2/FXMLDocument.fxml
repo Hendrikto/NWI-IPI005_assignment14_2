@@ -36,18 +36,18 @@
                <children>
                   <Label text="m:" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
                   <Label text="n:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <TextField id="inputM" GridPane.columnIndex="1">
+                  <TextField fx:id="inputM" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </TextField>
                   <Label text="result:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <TextField id="inputN" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="inputN" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Text id="resultText" strokeType="OUTSIDE" strokeWidth="0.0" text="unknown" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Text fx:id="resultText" strokeType="OUTSIDE" strokeWidth="0.0" text="unknown" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
