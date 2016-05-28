@@ -28,8 +28,8 @@ public class Ackermann {
     public void startCalculation() {
         stopCalculation();
         task = new AckermannWorker(m.get(), n.get());
-        new Thread(task).start();
         task.setOnSucceeded(this::handleSucceeded);
+        new Thread(task).start();
     }
 
     public void stopCalculation() {
