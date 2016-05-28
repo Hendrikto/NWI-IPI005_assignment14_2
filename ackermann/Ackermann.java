@@ -33,6 +33,7 @@ public class Ackermann {
         stopCalculation();
         task = new AckermannWorker(m.get(), n.get());
         task.setOnSucceeded(this::handleSucceeded);
+        task.messageProperty().addListener(e -> status.set(task.getMessage()));
         new Thread(task).start();
     }
 
