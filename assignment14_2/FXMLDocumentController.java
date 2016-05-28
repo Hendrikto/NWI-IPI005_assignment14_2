@@ -8,7 +8,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
 
@@ -22,7 +21,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML protected TextField inputN;
     @FXML protected TextField inputM;
-    @FXML protected Text resultText;
+    @FXML protected TextField resultField;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -30,7 +29,7 @@ public class FXMLDocumentController implements Initializable {
         StringConverter<Number> converter = new NumberStringConverter();
         Bindings.bindBidirectional(inputM.textProperty(), generator.mProperty(), converter);
         Bindings.bindBidirectional(inputN.textProperty(), generator.nProperty(), converter);
-        Bindings.bindBidirectional(resultText.textProperty(), generator.resultProperty(), converter);
+        Bindings.bindBidirectional(resultField.textProperty(), generator.resultProperty(), converter);
     }
 
     /**
