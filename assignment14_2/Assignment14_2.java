@@ -16,6 +16,7 @@ public class Assignment14_2 extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         stage.setScene(new Scene(root));
+        stage.setTitle("Ackermann");
         stage.show();
     }
 
