@@ -30,6 +30,7 @@ public class FXMLDocumentController implements Initializable {
         StringConverter<Number> converter = new NumberStringConverter();
         Bindings.bindBidirectional(inputM.textProperty(), generator.mProperty(), converter);
         Bindings.bindBidirectional(inputN.textProperty(), generator.nProperty(), converter);
+        Bindings.bindBidirectional(resultText.textProperty(), generator.resultProperty(), converter);
     }
 
     /**
