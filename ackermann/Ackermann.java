@@ -5,6 +5,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 
@@ -17,12 +19,14 @@ public class Ackermann {
     private final IntegerProperty m;
     private final IntegerProperty n;
     private final IntegerProperty result;
+    private final StringProperty status;
     private Task<Integer> task;
 
     public Ackermann() {
         this.m = new SimpleIntegerProperty();
         this.n = new SimpleIntegerProperty();
         this.result = new SimpleIntegerProperty();
+        this.status = new SimpleStringProperty();
     }
 
     public void startCalculation() {
@@ -57,6 +61,13 @@ public class Ackermann {
      */
     public IntegerProperty resultProperty() {
         return result;
+    }
+
+    /**
+     * @return the status property
+     */
+    public StringProperty statusProperty() {
+        return status;
     }
 
     private void handleSucceeded(WorkerStateEvent e) {
