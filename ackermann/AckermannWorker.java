@@ -46,6 +46,13 @@ public class AckermannWorker extends Task<Integer> {
         updateMessage("failed");
     }
 
+    /**
+     * Calculate the Ackermann value for m, n.
+     *
+     * @param m the m value
+     * @param n the n value
+     * @return the Ackermann value for m, n
+     */
     private int calculate(int m, int n) {
         if (isCancelled()) {
             return 0;
