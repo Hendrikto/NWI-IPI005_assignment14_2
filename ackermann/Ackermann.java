@@ -29,6 +29,9 @@ public class Ackermann {
         status = new SimpleStringProperty();
     }
 
+    /**
+     * Stop the currently running calculation and start a new one.
+     */
     public void startCalculation() {
         stopCalculation();
         task = new AckermannWorker(m.get(), n.get());
@@ -37,6 +40,9 @@ public class Ackermann {
         new Thread(task).start();
     }
 
+    /**
+     * Stop the current calculation.
+     */
     public void stopCalculation() {
         if (task != null) {
             task.cancel();
@@ -71,6 +77,9 @@ public class Ackermann {
         return status;
     }
 
+    /**
+     * @param e the worker state event
+     */
     private void handleSucceeded(WorkerStateEvent e) {
         try {
             result.set(task.get());
