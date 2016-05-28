@@ -26,16 +26,16 @@ public class Ackermann {
     }
 
     public void startCalculation() {
-        if (task != null) {
-            task.cancel();
-        }
+        stopCalculation();
         task = new AckermannWorker(m.get(), n.get());
         new Thread(task).start();
         task.setOnSucceeded(this::handleSucceeded);
     }
 
     public void stopCalculation() {
-        task.cancel();
+        if (task != null) {
+            task.cancel();
+        }
     }
 
     /**
