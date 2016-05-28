@@ -12,11 +12,13 @@ public class Ackermann {
 
     private final IntegerProperty m;
     private final IntegerProperty n;
+    private final IntegerProperty result;
     private Task<Integer> task;
 
     public Ackermann() {
         this.m = new SimpleIntegerProperty();
         this.n = new SimpleIntegerProperty();
+        this.result = new SimpleIntegerProperty();
     }
 
     public void startCalculation() {
@@ -43,6 +45,13 @@ public class Ackermann {
      */
     public IntegerProperty nProperty() {
         return n;
+    }
+
+    /**
+     * @return the result property
+     */
+    public IntegerProperty resultProperty() {
+        return result;
     }
 
 }
