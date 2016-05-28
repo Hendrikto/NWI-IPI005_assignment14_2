@@ -23,10 +23,10 @@ public class Ackermann {
     private Task<Integer> task;
 
     public Ackermann() {
-        this.m = new SimpleIntegerProperty();
-        this.n = new SimpleIntegerProperty();
-        this.result = new SimpleIntegerProperty();
-        this.status = new SimpleStringProperty();
+        m = new SimpleIntegerProperty();
+        n = new SimpleIntegerProperty();
+        result = new SimpleIntegerProperty();
+        status = new SimpleStringProperty();
     }
 
     public void startCalculation() {
