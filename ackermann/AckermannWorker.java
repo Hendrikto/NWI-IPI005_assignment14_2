@@ -26,30 +26,6 @@ public class AckermannWorker extends Task<Integer> {
         return calculate(m, n);
     }
 
-    @Override
-    protected void running() {
-        super.running();
-        updateMessage("running");
-    }
-
-    @Override
-    protected void succeeded() {
-        super.succeeded();
-        updateMessage("succeeded");
-    }
-
-    @Override
-    protected void cancelled() {
-        super.cancelled();
-        updateMessage("cancelled");
-    }
-
-    @Override
-    protected void failed() {
-        super.failed();
-        updateMessage("failed");
-    }
-
     /**
      * Calculate the Ackermann value for m, n.
      *

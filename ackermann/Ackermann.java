@@ -3,6 +3,7 @@ package ackermann;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.beans.Observable;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -36,7 +37,7 @@ public class Ackermann {
         stopCalculation();
         task = new AckermannWorker(m.get(), n.get());
         task.setOnSucceeded(this::handleSucceeded);
-        task.messageProperty().addListener(e -> status.set(task.getMessage()));
+        task.stateProperty().addListener(this::handleStateChanged);
         new Thread(task).start();
     }
 
@@ -86,6 +87,13 @@ public class Ackermann {
         } catch (InterruptedException | ExecutionException ex) {
             Logger.getLogger(Ackermann.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    /**
+     * @param o the observable
+     */
+    private void handleStateChanged(Observable o) {
+        status.set(task.getState().name().toLowerCase());
     }
 
 }
