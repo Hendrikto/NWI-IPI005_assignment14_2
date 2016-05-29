@@ -12,6 +12,10 @@ public class AckermannWorker extends Task<Integer> {
     private final int m;
     private final int n;
 
+    /**
+     * @param m the m value
+     * @param n the n value
+     */
     public AckermannWorker(int m, int n) {
         this.m = m;
         this.n = n;
