@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -70,12 +70,12 @@
                   </Text>
                </children>
             </GridPane>
-            <Group>
-               <children>
-                  <Button contentDisplay="TOP" defaultButton="true" layoutX="53.0" mnemonicParsing="false" onAction="#handleStartButton" text="Start" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <ButtonBar buttonOrder="U">
+               <buttons>
+                  <Button contentDisplay="TOP" defaultButton="true" mnemonicParsing="false" onAction="#handleStartButton" text="Start" />
                   <Button cancelButton="true" mnemonicParsing="false" onAction="#handleStopButton" text="Stop" />
-               </children>
-            </Group>
+               </buttons>
+            </ButtonBar>
          </children>
       </VBox>
    </children>
